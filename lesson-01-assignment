@@ -1,0 +1,28 @@
+/**
+Question 1
+*/
+
+CodingClass.where(title: "Intro to Programming")
+
+Enrollment.where(course_id: 1).where(final_grade: "completed")
+
+Student.find(1).email()
+Student.find(2).email()
+
+1, luigi@dubuque.example
+2, leta.kuhic@daugherty-maggio.test
+
+/**
+Question 2
+*/
+
+Enrollment.where(course_id: 1).where(final_grade: nil)
+
+MentorEnrollmentAssignment.find(3)
+MentorEnrollmentAssignment.find(6)
+
+Mentor.find(1).email()
+Mentor.find(2).email()
+
+1, christoper_bechtelar@schneider.test
+2, dung@brekke-schinner.test
