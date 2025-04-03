@@ -16,13 +16,23 @@ Student.find(2).email()
 Question 2
 */
 
-Enrollment.where(course_id: 1).where(final_grade: nil)
+// Result Course id:1
+CodingClass.where(title: "Intro to Programming")
 
-MentorEnrollmentAssignment.find(3)
-MentorEnrollmentAssignment.find(6)
+// Result Trimester id:5
+Trimester.where(year: 2025).where(term: "Spring")
 
-Mentor.find(1).email()
-Mentor.find(2).email()
+// Result Enrollment id: 73,76
+Enrollment.where(course_id: 5).where(final_grade: nil)
 
-1, christoper_bechtelar@schneider.test
-2, dung@brekke-schinner.test
+// Result mentor_id: 25,26
+MentorEnrollmentAssignment.where(enrollment_id: 73)
+MentorEnrollmentAssignment.where(enrollment_id: 76)
+
+// Find emails
+Mentor.find(25).email()
+Mentor.find(26).email()
+
+// Email resultsq
+25, "eric.braun@considine.example"
+26, "andrew@muller.example"
