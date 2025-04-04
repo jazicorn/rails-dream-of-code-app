@@ -1,0 +1,48 @@
+/**
+Question 1
+*/
+
+//Result coding class id: 1
+CodingClass.where(title: "Intro to Programming")
+
+// Result Trimester id:5
+Trimester.where(year: 2025).where(term: "Spring")
+
+// Result Course id:5
+Course.where(coding_class_id: 1).where(trimester_id:5)
+
+// Result Enrollment id: 71,72 | student_id: 41,42
+Enrollment.where(course_id: 5)
+
+// Find emails
+Student.find(41).email()
+Student.find(42).email()
+
+// Email results
+41, "malcom@king-kilback.example"
+42, "cecil@hauck.example"
+
+/**
+Question 2
+*/
+
+// Result Coding Class id:1
+CodingClass.where(title: "Intro to Programming")
+
+// Result Trimester id:5
+Trimester.where(year: 2025).where(term: "Spring")
+
+// Result Enrollment id: 73,76
+Enrollment.where(course_id: 5).where(final_grade: nil)
+
+// Result mentor_id: 25,26
+MentorEnrollmentAssignment.where(enrollment_id: 73)
+MentorEnrollmentAssignment.where(enrollment_id: 76)
+
+// Find emails
+Mentor.find(25).email()
+Mentor.find(26).email()
+
+// Email results
+25, "eric.braun@considine.example"
+26, "andrew@muller.example"
