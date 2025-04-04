@@ -2,21 +2,29 @@
 Question 1
 */
 
+//Result coding class id: 1
 CodingClass.where(title: "Intro to Programming")
 
-Enrollment.where(course_id: 1).where(final_grade: "completed")
+// Result Trimester id:5
+Trimester.where(year: 2025).where(term: "Spring")
 
-Student.find(1).email()
-Student.find(2).email()
+// Result Course id:5
+Course.where(coding_class_id: 1).where(trimester_id:5)
 
-1, luigi@dubuque.example
-2, leta.kuhic@daugherty-maggio.test
+// Result Enrollment id: 71,72 | student_id: 41,42
+Enrollment.where(course_id: 5)
+
+Student.find(41).email()
+Student.find(42).email()
+
+41, "malcom@king-kilback.example"
+42, "cecil@hauck.example"
 
 /**
 Question 2
 */
 
-// Result Course id:1
+// Result Coding Class id:1
 CodingClass.where(title: "Intro to Programming")
 
 // Result Trimester id:5
